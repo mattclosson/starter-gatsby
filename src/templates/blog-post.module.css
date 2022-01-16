@@ -16,7 +16,6 @@
   gap: var(--space-xl);
   letter-spacing: var(--text-prose-tracking);
   line-height: var(--loose);
-  padding: var(--size-gutter) var(--size-gutter) calc(var(--size-gutter) * 2);
 }
 
 .body {
@@ -83,11 +82,8 @@
 
 @media (min-width: 1024px) {
   .article {
-    gap: var(--space-3xl);
-    margin: 0 var(--size-gutter) 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    width: calc(85% - var(--size-gutter));
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .article ul {

@@ -3,22 +3,18 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
+import VideoPreview from '../components/video-preview'
 
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    const videos = get(this, 'props.data.allContentfulVideo.nodes')
 
+    console.log(videos)
     return (
       <Layout location={this.props.location}>
-        <Hero
-          image={author.heroImage.gatsbyImageData}
-          title={author.name}
-          content={author.shortBio.shortBio}
-        />
-        <ArticlePreview posts={posts} />
+        <VideoPreview videos={videos} />
       </Layout>
     )
   }
@@ -28,6 +24,16 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    allContentfulVideo(sort: { fields: [createdAt], order: DESC }) {
+      nodes {
+        createdAt(formatString: "MMMM Do, YYYY")
+        video {
+          file {
+            url
+          }
+        }
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title

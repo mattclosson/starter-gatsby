@@ -21,17 +21,16 @@ class BlogPostTemplate extends React.Component {
           description={post.description.childMarkdownRemark.excerpt}
           image={`http:${post.heroImage.resize.src}`}
         />
-        <Hero
-          image={post.heroImage?.gatsbyImageData}
-          title={post.title}
-          content={post.description?.childMarkdownRemark?.excerpt}
-        />
         <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body?.childMarkdownRemark?.timeToRead} minute read
-          </span>
+          <Hero
+            image={post.heroImage?.gatsbyImageData}
+            title={post.title}
+            content={post.description?.childMarkdownRemark?.excerpt}
+            author={post.author?.name}
+            rawDate={post.rawDate}
+            publishDate={post.publishDate}
+            timeToRead={post.body?.childMarkdownRemark?.timeToRead}
+          />
           <div className={styles.article}>
             <div
               className={styles.body}

@@ -1,0 +1,13 @@
+.mixes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    gap: 20px;
+}
+
+.mixes-list li {
+    list-style-type: none;
+    padding: 0;
+    background-color: pink;
+    padding: 20px;
+}

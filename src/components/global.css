@@ -51,6 +51,15 @@ h6 {
   line-height: var(--dense);
 }
 
+.body-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding-bottom: 16.5rem;
+}
+
 a {
   color: currentColor;
   text-decoration: none;
