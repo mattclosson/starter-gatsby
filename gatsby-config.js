@@ -50,5 +50,22 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: 'gatsby-remark-audio',
+      options: {
+        preload: 'auto',
+        loop: false,
+        controls: true,
+        muted: false,
+        autoplay: false
+      }
+    },
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        password: "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",
+        storeUrl: "avanti-demo.myshopify.com",
+      },
+    },
   ],
 };

@@ -1,0 +1,11 @@
+.productContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.productContainer h1 {
+    margin-top: 0;
+}
