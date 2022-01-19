@@ -13,53 +13,53 @@ import AddToCart from "../../components/AddToCart"
 import { StoreContext } from '../../context/store-context'
 
 export default function Product({ data: { product } }) {
-    const {
-        options,
-        variants,
-        variants: [initialVariant],
-        priceRangeV2,
-        title,
-        description,
-        images,
-        images: [firstImage],
-    } = product
-    console.log(product)
-    const { client } = React.useContext(StoreContext)
+  const {
+    options,
+    variants,
+    variants: [initialVariant],
+    priceRangeV2,
+    title,
+    description,
+    images,
+    images: [firstImage],
+  } = product
+  console.log(product)
+  const { client } = React.useContext(StoreContext)
 
-    const [variant, setVariant] = React.useState({ ...initialVariant })
-    const [quantity, setQuantity] = React.useState(1)
+  const [variant, setVariant] = React.useState({ ...initialVariant })
+  const [quantity, setQuantity] = React.useState(1)
 
-    const productVariant =
-        client.product.helpers.variantForOptions(product, variant) || variant
+  const productVariant =
+    client.product.helpers.variantForOptions(product, variant) || variant
 
-    const [available, setAvailable] = React.useState(
-        productVariant.availableForSale
-    )
+  const [available, setAvailable] = React.useState(
+    productVariant.availableForSale
+  )
 
 
-    return (
-        <Layout>
-            <Container>
-                <Seo
-                    title={product.title}
-                />
-                <Container>
-                    <div class={styles.productContainer}>
-                        <div><GatsbyImage image={product.images[0].gatsbyImageData} /></div>
-                        <div>
-                            <h1>{product.title}</h1>
-                            <p>{product.priceRangeV2.maxVariantPrice.amount}</p>
-                            <AddToCart
-                                variantId={productVariant.storefrontId}
-                                quantity={quantity}
-                                available={available}
-                            />
-                        </div>
-                    </div>
-                </Container>
-            </Container>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <Container>
+        <Seo
+          title={product.title}
+        />
+        <Container>
+          <div class={styles.productContainer}>
+            <div><GatsbyImage image={product.images[0].gatsbyImageData} /></div>
+            <div>
+              <h1>{product.title}</h1>
+              <p>${product.priceRangeV2.maxVariantPrice.amount}</p>
+              <AddToCart
+                variantId={productVariant.storefrontId}
+                quantity={quantity}
+                available={available}
+              />
+            </div>
+          </div>
+        </Container>
+      </Container>
+    </Layout>
+  )
 }
 
 export const query = graphql`

@@ -18,10 +18,14 @@ const ProductsPreview = ({ products }) => {
                     {products.map((product) => (
                         <li key={product.shopifyId}>
                             <h3>
-                                <img src={product.images[0].originalSrc} />
-                                <Link to={`/products/${product.handle}`}>{product.title}</Link><br />
-                                ${product.priceRangeV2.maxVariantPrice.amount}
+                                <Link to={`/products/${product.handle}`}>
+                                    <div className={styles.productImg}>
+                                        <img src={product.images[0].originalSrc} />
+                                    </div>
+                                    {product.title}
+                                </Link>
                             </h3>
+                            <span>${product.priceRangeV2.maxVariantPrice.amount}</span>
                         </li>
                     ))}
                 </ul>

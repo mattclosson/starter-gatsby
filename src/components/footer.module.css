@@ -1,6 +1,6 @@
 .container {
   font-size: var(--text-sm);
-  margin-top: var(--space-2xl);
+  margin-top: 130px;
   text-align: center;
   background-color: black;
   position: absolute;

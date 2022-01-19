@@ -6,13 +6,27 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: -25px;
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 
 .productUl img {
-    margin-bottom: 20px;
 }
 
 .productUl li {
     list-style: none;
+}
+
+.productUl li h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.productUl li a:hover {
+    color: #000;
+}
+
+.productImg {
+    height: 360px;
+    width: 100%;
+    margin-bottom: 30px;
 }

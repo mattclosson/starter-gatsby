@@ -1,6 +1,8 @@
 import * as React from "react"
 import { StoreContext } from "../context/store-context"
 
+import * as styles from './AddToCart.module.css'
+
 export default function AddToCart({ variantId, quantity, available, ...props }) {
     const { addVariantToCart, loading } = React.useContext(StoreContext)
     console.log(variantId, quantity)
@@ -12,6 +14,7 @@ export default function AddToCart({ variantId, quantity, available, ...props }) 
     return (
         <button
             type="submit"
+            class={styles.addBtn}
             onClick={addToCart}
             disabled={!available || loading}
             {...props}

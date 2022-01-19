@@ -36,8 +36,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "Avanti | Archive Fashion",
+    description: "Vast curation of archive fashion.",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
