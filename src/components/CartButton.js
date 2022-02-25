@@ -8,8 +8,9 @@ export function CartButton({ quantity }) {
         <Link
             aria-label={`Shopping Cart with ${quantity} items`}
             to="/cart"
+            className={styles.cartContainer}
         >
-            Cart {quantity > 0 && <div className={styles.quantity}>{quantity}</div>}
+            <img src="/images/bag.svg" width="50px" className={styles.bag} /> {quantity > 0 && <div className={styles.quantity}>{quantity}</div>}
         </Link>
     )
 }

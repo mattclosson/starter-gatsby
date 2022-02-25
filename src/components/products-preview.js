@@ -12,17 +12,17 @@ const ProductsPreview = ({ products }) => {
 
     return (
         <Container>
-            <h1>Products</h1>
             <div className={styles.productContainer}>
                 <ul className={styles.productUl}>
                     {products.map((product) => (
                         <li key={product.shopifyId}>
                             <h3>
-                                <Link to={`/products/${product.handle}`}>
+                                <Link to={`/shop/${product.handle}`}>
                                     <div className={styles.productImg}>
                                         <img src={product.images[0].originalSrc} />
                                     </div>
                                     {product.title}
+                                    <p>{product.description}</p>
                                 </Link>
                             </h3>
                             <span>${product.priceRangeV2.maxVariantPrice.amount}</span>

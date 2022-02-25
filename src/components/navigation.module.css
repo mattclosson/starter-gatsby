@@ -31,6 +31,10 @@
   text-decoration: none;
 }
 
+.cartContainer {
+  display: flex;
+}
+
 .logoLink {
   display: flex;
   font-weight: var(--medium);
@@ -38,6 +42,12 @@
   flex-direction: row;
   flex-shrink: 0;
   gap: var(--space-md);
+}
+
+.bag {
+  width: 24px;
+  display: inline-block;
+  margin-top: -3px;
 }
 
 @media (max-width: 767px) {
@@ -68,5 +78,5 @@
   color: white;
   padding: 6px 13px;
   border-radius: 32px;
-  margin-left: 6px;
+  margin-left: 7px;
 }

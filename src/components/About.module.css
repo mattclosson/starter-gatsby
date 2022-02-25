@@ -1,0 +1,16 @@
+.aboutContainer {
+    max-width: 650px; 
+    margin: 0 auto;
+    margin-top: 50px; 
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.aboutContainer a {
+    font-weight: bold;
+}
+
+.aboutContainer a:hover {
+    color: #000;
+    text-decoration: underline;
+}

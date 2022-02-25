@@ -27,17 +27,17 @@ function Navigation() {
           </Link>
         </li>
         <li className={styles.navigationItem}>
-          <Link to="/blog/" activeClassName="active">
-            Blog
+          <Link to="/playlist/" activeClassName="active">
+            Playlist
           </Link>
         </li>
         <li className={styles.navigationItem}>
-          <Link to="/mixes/" activeClassName="active">
-            Mixes
+          <Link to="/about/" activeClassName="active">
+            About
           </Link>
         </li>
         <li className={styles.navigationItem}>
-          <Link to="/products/" activeClassName="active">
+          <Link to="/shop/" activeClassName="active">
             Shop
           </Link>
         </li>

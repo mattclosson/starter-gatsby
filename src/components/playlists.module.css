@@ -1,0 +1,26 @@
+.mixes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    gap: 20px;
+}
+
+.mixes-list li {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgb(133, 9, 71);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.mixes-list li a:hover {
+    color: #fff;
+}
+
+.playlistsContainer {
+    max-width: 400px;
+    margin: 0 auto;
+}
